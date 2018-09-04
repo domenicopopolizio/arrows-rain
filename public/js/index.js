@@ -33,7 +33,11 @@ let lastTick = 0; //last arrow();
 let tick = 1;
 let scoreElem;
 let recordElem;
+let lastElem;
 let menuElem;
+let started = false;
+
+let toTouch = 1/5; //arrow sesction to touch to eliminate
 
 let score = 0;
 let record;
@@ -58,25 +62,32 @@ const getTop = r => {
 
 const randrange = ( min, max ) => Math.floor(Math.random() * (max - min)) + min; //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 const checkTouch = (dir, dx, dy ) => {
+
     switch(dir) {
         case 'up':
-            return dy<0;
+            return dy<0 && dy<(MaxS*toTouch);
             break;
         case 'down':
-            return dy>0;
+            return dy>0 && dy>(MaxS*toTouch);
             break;
         case 'right':
-            return dx>0;
+            return dx>0 && dx>(MaxS*toTouch);
             break;
         case 'left':
-            return dx<0;
+            return dx<0 && dx<(MaxS*toTouch);
             break;
     }
 }
 
 const writeScore = () => scoreElem.innerHTML = score 
-const writeRecord = () => recordElem.innerHTML = 'Record: '+record;
-
+const writeRecord = () => recordElem.innerHTML = 'Best: '+record;
+const writeLast = () => { 
+    if(!started) lastElem.style.display = "none"
+    else {
+        lastElem.style.display = "block";
+        lastElem.innerHTML = score+"<br>";
+    }
+}
 function addPoint() {
     score++;
     writeScore();
@@ -87,6 +98,29 @@ function addPoint() {
     
 }
 
+function targetingArrow(event) {
+    let touches = event.changedTouches[0];
+    event.target.dataset.xi = touches.pageX/*-parseFloat(event.target.style.left)*/;
+    event.target.dataset.yi = touches.pageY/*-parseFloat(event.target.style.top)*/;
+}
+
+function movingOnArrow(event) {
+    let touches = event.changedTouches[0];
+    let xf = touches.pageX/*-parseFloat(event.target.style.left)*/;
+    let yf = touches.pageY/*-parseFloat(event.target.style.top)*/;
+    let dx = xf-event.target.dataset.xi;
+    let dy = yf-event.target.dataset.yi;
+    console.log(dx, dy);
+    //console.log(xi, xf, dx, yi, yf, dy);
+    if(checkTouch(event.target.dataset.dir, dx, dy)) {
+        
+        addPoint();
+        removeArrow(event.target);
+        event.target.removeEventListener('touchstart', targetingArrow);
+        event.target.removeEventListener('touchmove', movingOnArrow);
+    }
+}
+
 function addArrow() {
     let newArrow = document.createElement('div');
     newArrow.classList.add('arrow');
@@ -94,37 +128,20 @@ function addArrow() {
     let dir = directions[randrange(0, directions.length-1)];
     newArrow.classList.add(dir);
 
+    newArrow.dataset.dir = dir;
+
     document.body.appendChild(newArrow);
 
     newArrow.style.top = -newArrow.clientHeight+'px';
     newArrow.style.left = randrange(margin, Ww-newArrow.clientWidth-margin)+'px';
     
-    let xi, yi;
-    newArrow.addEventListener(
-        'touchstart',
-        event => {
-            let touches = event.changedTouches[0];
-            xi = touches.pageX;
-            yi = touches.pageY;
-        }
-    )
- 
+    
+    
+    
+   
 
-    newArrow.addEventListener(
-        'touchend',
-        event => {
-            let touches = event.changedTouches[0];
-            let xf = touches.pageX;
-            let yf = touches.pageY;
-            let dx = xf-xi;
-            let dy = yf-yi;
-            //console.log(xi, xf, dx, yi, yf, dy);
-            if(checkTouch(dir, dx, dy)) {
-                addPoint();
-                removeArrow(event.target);
-            }
-        }
-    )
+    newArrow.addEventListener('touchstart', targetingArrow );
+    newArrow.addEventListener('touchmove', movingOnArrow );
 
     
     arrows = document.querySelectorAll('.arrow');
@@ -196,6 +213,7 @@ function onKeyPress(event) {
 }
 
 function start() {
+    started = true;
     closeMenu();
     score = 0;
     vr = vri;
@@ -213,7 +231,8 @@ function start() {
 
 function openMenu() {
     writeRecord();
-    
+    writeLast();
+
     menuElem.classList.remove('closed');
     menuElem.classList.add('opened');
 }
@@ -227,8 +246,12 @@ function closeMenu() {
 window.addEventListener(
     'DOMContentLoaded',
     () => {
+
+        started = false;
+
         scoreElem = document.querySelector("#score");
-        recordElem = document.querySelector("#menu-record");
+        recordElem = document.querySelector("#menu-score #record");
+        lastElem = document.querySelector("#menu-score #last");
         menuElem = document.querySelector('#menu');
         
         document.querySelector("#start").addEventListener( 'click', start );

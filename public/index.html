@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<!-- PWA INFOS AND META TAGS -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1,  maximum-scale=1.0, user-scalable=0">
 		
 		<meta name="theme-color" content="#232323">
 		<title>Arrows Rain</title>
@@ -64,7 +64,10 @@
 		<div id="menu">
 			<img src='res/logo.png' id="logo">
 			<span id="title">Arrows Rain</span>
-			<span id="menu-record">Record: 0</span>
+			<div id="menu-score">
+				<span id="last"></span>
+				<span id="record" >Best: 0</span>
+			</div>
 			<div id="start"><svg class="icon icon-play_arrow"><use xlink:href="#icon-play_arrow"></use></svg></div>
 		</div>
 		<svg>

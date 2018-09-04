@@ -1,71 +1,108 @@
-﻿//This is the service worker with the Cache-first network
+﻿///////////////////////////////COSTANTI PER CACHE//////////////////////////////
 
-var CACHE = 'arrows-rain-cache';
-var precacheFiles = [
-    '/',
+const CACHE = "ARROWS-RAIN-CACHE";
+const OFFLINECACHE = "ARROWS-RAIN-OFFLINE-CACHE";
+
+var precacheFiles = [   
     'res/arrows/up.png',
     'res/arrows/down.png',
     'res/arrows/left.png',
     'res/arrows/right.png',
-    'index.html',
-    'css/index.css',
-    'js/index.js',
     'res/logo.png',
     'res/logo.jpg',
     'res/oglogo.png',
     'res/favicon.ico',
+];
+
+var offlineFiles = [
+    '/',
+    'index.html',
+    'css/index.css',
+    'js/index.js',
     'manifest.json',
 ];
 
-//Install stage sets up the cache-array to configure pre-cache content
-self.addEventListener('install', function(evt) {
-  console.log('[PWA Builder] The service worker is being installed.');
-  evt.waitUntil(precache().then(function() {
-    console.log('[PWA Builder] Skip waiting on install');
-    return self.skipWaiting();
-  }));
-});
+///////////////////////////////FUNZIONI///////////////////////////////
 
 
-//allow sw to control of current page
-self.addEventListener('activate', function(event) {
-  console.log('[PWA Builder] Claiming clients for current page');
-  return self.clients.claim();
-});
-
-self.addEventListener('fetch', function(evt) {
-  console.log('[PWA Builder] The service worker is serving the asset.'+ evt.request.url);
-  evt.respondWith(fromCache(evt.request).catch(fromServer(evt.request)));
-  evt.waitUntil(update(evt.request));
-});
-
-
-function precache() {
-  return caches.open(CACHE).then(function (cache) {
-    return cache.addAll(precacheFiles);
-  });
+const update = async (request, cacheName) => {
+    let cache = await caches.open(cacheName);
+    let response = await fetch(request);
+    await cache.put(request, response.clone());
+    return request;
 }
 
-function fromCache(request) {
-  //we pull files from the cache first thing so we can show them fast
-  return caches.open(CACHE).then(function (cache) {
-    return cache.match(request).then(function (matching) {
-      return matching || Promise.reject('no-match');
-    });
-  });
+const sendToCache = async (cacheName, toCache) => {
+    caches.open(cacheName)
+    .then (
+        cache => cache.addAll(toCache)
+    )
 }
 
-function update(request) {
-  //this is where we call the server to get the newest version of the 
-  //file to use the next time we show view
-  return caches.open(CACHE).then(function (cache) {
-    return fetch(request).then(function (response) {
-      return cache.put(request, response);
-    });
-  });
+
+const offlineFetch = async event => {
+    let offline_cache = await caches.open(OFFLINECACHE);
+    
+    await update(event.request, OFFLINECACHE);
+    let response = await offline_cache.match(event.request)
+
+    return response;
 }
 
-function fromServer(request){
-  //this is the fallback if it is not in the cache to go to the server and get it
-  return fetch(request).then(function(response){ return response});
+
+const cacheFetch = async event => {
+    let cache = await caches.open(CACHE);
+
+    try {
+        let response = await cache.match(event.request);
+        
+        if(response) {
+            update(event.request, CACHE);
+            return response;
+        }
+        else {
+            return offlineFetch(event);
+        }
+    }
+    catch(e) {
+        return offlineFetch(event);
+    }
 }
+
+///////////////////////////////EVENTI/////////////////////////////////
+
+
+self.addEventListener(
+    'install',
+    event => {
+        let cacheWhitelist = [];
+        event.waitUntil(
+            sendToCache(OFFLINECACHE, offlineFiles)
+        );
+        event.waitUntil(
+            sendToCache(CACHE, precacheFiles)
+        );
+    }
+);
+
+self.addEventListener(
+    'activate',
+    event => {}
+);
+
+self.addEventListener(
+    'message',
+    event => {
+        let message = event.data;
+        console.log('Ricevuto messaggio recitante: "'+message+'";');
+    }
+    
+);
+
+self.addEventListener(
+    'fetch',
+    event => event.respondWith( cacheFetch(event) )
+);
+
+
+///////////////////////////////FINE///////////////////////////////////z

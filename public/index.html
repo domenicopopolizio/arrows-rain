@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+	<head>
+		<!-- PWA INFOS AND META TAGS -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<meta name="theme-color" content="#232323">
+		<title>Arrows Rain</title>
+		<link rel="manifest" href="manifest.json">
+		<link rel="shortcut icon" href="res/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="res/favicon.ico" type="image/x-icon">
+
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="robots" content="index, follow"><!-- CAMBIARE PER NUOVE PAG!!! -->
+		<meta name="description" content="Destroy the falling arrows!">
+		<meta name="keywords" 
+		content="arrows, rain, arrow, rain, 
+		arrow rain, arrows rain, arrow game,
+		 arrows game, colored, color, colors, c
+		 olored arrows, frecce, pioggia di frecce, 
+		 pioggia, freccia, colore, colori,">
+
+		<meta property="og:title" content="Arrows Rain" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://arrows-rain.firebaseapp.com" />
+		<meta property="og:image" content="https://arrows-rain.firebaseapp.com/res/oglogo.png" />
+		<meta property="og:description" content="Destroy the falling arrows!">
+		<meta property="og:locale" content="en_US" />
+		<meta property="fb:app_id" content="428336890955398" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="apple-touch-icon" 				href="res/logo.jpg">
+		<link rel="apple-touch-icon" size="152x152" href="res/logo.jpg">
+		<link rel="apple-touch-icon" size="167x167" href="res/logo.jpg">
+		<link rel="apple-touch-icon" size="180x180"	href="res/logo.jpg">
+		<link rel="apple-touch-startup-image" href="res/logo.png">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#232323">
+		<meta name=”apple-mobile-web-app-capable” content=”yes”>
+		<meta name="apple-mobile-web-app-title" content="Falling Arrows">
+
+
+
+		<!-- LIBRERIE -->
+		
+		<!-- FILE ESTERNI -->
+		<link href="css/index.css" rel="stylesheet" type="text/css" />
+		<script src="js/index.js"></script>
+
+		<!-- REGISTRAZIONE SERVICE WORKER -->
+		<script>
+			if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('sw.js')
+                .then(
+                    reg => console.log(reg)
+                )
+                .catch(
+                    err => console.log("Qualcosa è andato storto nell'installazione di service woker! Errore: ", err)
+                );
+            }
+		</script>
+
+	</head>
+	<body> 	
+		<span id="score"></span>
+		<div id="menu">
+			<img src='res/logo.png' id="logo">
+			<span id="title">Arrows Rain</span>
+			<span id="menu-record">Record: 0</span>
+			<div id="start"><svg class="icon icon-play_arrow"><use xlink:href="#icon-play_arrow"></use></svg></div>
+		</div>
+		<svg>
+				<symbol id="icon-play_arrow" viewBox="0 0 24 24">
+					<title>play_arrow</title>
+					<path d="M8.016 5.016l10.969 6.984-10.969 6.984v-13.969z"></path>
+				</symbol>
+		</svg>
+	</body>
+</html>

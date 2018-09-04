@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DOMEPC</Machine>
+    <WindowsUser>Utente</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>dfef0617-2e85-4c89-b8d8-9da64d56eeb1</PackageIdentityName>
+    <PackageIdentityPublisher>CN=Utente</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\bld\Debug\</IntermediateOutputPath>
+    <RemoteDeploymentType>
+    </RemoteDeploymentType>
+    <PackageRegistrationPath>
+    </PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath>
+    </WindowsSdkPath>
+    <LayoutDir>C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\bin\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>9887A1697DB0B33D11EE81280BD57179E569C808F68467C3FF77FA23FBBCC365</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>dfef0617-2e85-4c89-b8d8-9da64d56eeb1_0.3.0.0_neutral__wvbdtds52vrna</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>dfef0617-2e85-4c89-b8d8-9da64d56eeb1_wvbdtds52vrna!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>dfef0617-2e85-4c89-b8d8-9da64d56eeb1</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Utente</RegisteredPackagePublisher>
+    <RegisteredVersion>0.3.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T15:27:26.580</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\LargeTile.scale-100.png">
+      <PackagePath>images\LargeTile.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:36.503</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\LargeTile.scale-125.png">
+      <PackagePath>images\LargeTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:36.553</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\LargeTile.scale-150.png">
+      <PackagePath>images\LargeTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:36.622</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\LargeTile.scale-200.png">
+      <PackagePath>images\LargeTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:36.710</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\LargeTile.scale-400.png">
+      <PackagePath>images\LargeTile.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:37.009</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\SmallTile.scale-100.png">
+      <PackagePath>images\SmallTile.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:35.851</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\SmallTile.scale-125.png">
+      <PackagePath>images\SmallTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:35.879</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\SmallTile.scale-150.png">
+      <PackagePath>images\SmallTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:35.909</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\SmallTile.scale-200.png">
+      <PackagePath>images\SmallTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:35.938</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\SmallTile.scale-400.png">
+      <PackagePath>images\SmallTile.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:35.978</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\splashscreen.scale-100.png">
+      <PackagePath>images\splashscreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:37.420</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\splashscreen.scale-125.png">
+      <PackagePath>images\splashscreen.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:37.484</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\splashscreen.scale-150.png">
+      <PackagePath>images\splashscreen.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:37.564</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\splashscreen.scale-400.png">
+      <PackagePath>images\splashscreen.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:38.147</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\Square150x150Logo.scale-100.png">
+      <PackagePath>images\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:36.016</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\Square150x150Logo.scale-125.png">
+      <PackagePath>images\Square150x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:36.045</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\Square150x150Logo.scale-150.png">
+      <PackagePath>images\Square150x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:36.077</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\Square150x150Logo.scale-400.png">
+      <PackagePath>images\Square150x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:36.189</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\Square44x44Logo.altform-unplated_targetsize-16.png">
+      <PackagePath>images\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:37.268</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\Square44x44Logo.altform-unplated_targetsize-256.png">
+      <PackagePath>images\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:37.371</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\Square44x44Logo.altform-unplated_targetsize-32.png">
+      <PackagePath>images\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:37.312</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\Square44x44Logo.altform-unplated_targetsize-48.png">
+      <PackagePath>images\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:37.332</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\Square44x44Logo.scale-100.png">
+      <PackagePath>images\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:37.033</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\Square44x44Logo.scale-125.png">
+      <PackagePath>images\Square44x44Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:37.056</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\Square44x44Logo.scale-150.png">
+      <PackagePath>images\Square44x44Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:37.078</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\Square44x44Logo.scale-400.png">
+      <PackagePath>images\Square44x44Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:37.126</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\Square44x44Logo.targetsize-16.png">
+      <PackagePath>images\Square44x44Logo.targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:37.148</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\Square44x44Logo.targetsize-24.png">
+      <PackagePath>images\Square44x44Logo.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:37.169</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\Square44x44Logo.targetsize-256.png">
+      <PackagePath>images\Square44x44Logo.targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:37.248</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\Square44x44Logo.targetsize-32.png">
+      <PackagePath>images\Square44x44Logo.targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:37.188</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\Square44x44Logo.targetsize-48.png">
+      <PackagePath>images\Square44x44Logo.targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:37.212</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\storelogo.scale-100.png">
+      <PackagePath>images\storelogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:38.173</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\storelogo.scale-125.png">
+      <PackagePath>images\storelogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:38.194</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\storelogo.scale-150.png">
+      <PackagePath>images\storelogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:38.215</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\storelogo.scale-200.png">
+      <PackagePath>images\storelogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:38.238</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\storelogo.scale-400.png">
+      <PackagePath>images\storelogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:38.273</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\Wide310x150Logo.scale-100.png">
+      <PackagePath>images\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:36.221</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\Wide310x150Logo.scale-125.png">
+      <PackagePath>images\Wide310x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:36.252</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\Wide310x150Logo.scale-150.png">
+      <PackagePath>images\Wide310x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:36.292</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\Wide310x150Logo.scale-400.png">
+      <PackagePath>images\Wide310x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:36.468</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\LockScreenLogo.scale-200.png">
+      <PackagePath>images\LockScreenLogo.scale-200.png</PackagePath>
+      <Modified>2018-05-13T10:20:14.633</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\SplashScreen.scale-200.png">
+      <PackagePath>images\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:37.693</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\Square150x150Logo.scale-200.png">
+      <PackagePath>images\Square150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:36.112</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\Square44x44Logo.scale-200.png">
+      <PackagePath>images\Square44x44Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:37.100</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>images\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:37.289</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\images\Wide310x150Logo.scale-200.png">
+      <PackagePath>images\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T14:57:36.341</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\msapp-error.js">
+      <PackagePath>msapp-error.js</PackagePath>
+      <Modified>2018-05-16T14:48:18.079</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\msapp-error.css">
+      <PackagePath>msapp-error.css</PackagePath>
+      <Modified>2018-05-13T10:20:14.633</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\msapp-error.html">
+      <PackagePath>msapp-error.html</PackagePath>
+      <Modified>2018-05-13T10:20:14.633</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\bin\Debug\ReverseMap\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-05-16T15:27:26.176</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

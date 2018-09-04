@@ -1,0 +1,17 @@
+C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\bin\Debug\ReverseMap\resources.pri
+C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\bin\Debug\AppxManifest.xml
+C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\bin\Debug\pwaUWP.build.appxrecipe
+C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\bld\Debug\pwaUWP.jsproj.CoreCompileInputs.cache
+C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\bld\Debug\ResourceHandlingTask.state
+C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\bld\Debug\priconfig.xml
+C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\bld\Debug\priconfig.xml.intermediate
+C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\bld\Debug\layout.resfiles
+C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\bld\Debug\layout.resfiles.intermediate
+C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\bld\Debug\resources.resfiles
+C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\bld\Debug\resources.resfiles.intermediate
+C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\bld\Debug\pri.resfiles
+C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\bld\Debug\pri.resfiles.intermediate
+C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\bld\Debug\qualifiers.txt
+C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\bld\Debug\qualifiers.txt.intermediate
+C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\programmi_e_progetti\casa\webDev\pwa\arrows-rain\pwaUWP\pwaUWP\bld\Debug\ProjectArchitectures.txt

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="dfef0617-2e85-4c89-b8d8-9da64d56eeb1" Version="0.5.0.0" Publisher="CN=Utente" />
+  <mp:PhoneIdentity PhoneProductId="dfef0617-2e85-4c89-b8d8-9da64d56eeb1" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>pwaUWP</DisplayName>
+    <PublisherDisplayName>Popolizio Domenico</PublisherDisplayName>
+    <Logo>images\storelogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="https://arrows-rain.firebaseapp.com/">
+      <uap:ApplicationContentUriRules>
+        <uap:Rule Match="https://arrows-rain.firebaseapp.com" Type="include" WindowsRuntimeAccess="all" />
+        <uap:Rule Match="https://*.*" Type="include" WindowsRuntimeAccess="none" />
+        <uap:Rule Match="http://*.*" Type="include" WindowsRuntimeAccess="none" />
+      </uap:ApplicationContentUriRules>
+      <uap:VisualElements DisplayName="Arrows Rain" Description="Press play and start to swipe on the arrows before they fall over the bottom of the screen!" BackgroundColor="#232323" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="images\Wide310x150Logo.png" Square310x310Logo="images\LargeTile.png" Square71x71Logo="images\SmallTile.png" ShortName="Arrows Rain">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="images\splashscreen.png" BackgroundColor="#232323" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="portrait" />
+          <uap:Rotation Preference="landscape" />
+        </uap:InitialRotationPreference>
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

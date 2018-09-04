@@ -1,10 +1,7 @@
-﻿///////////////////////////////COSTANTI PER CACHE//////////////////////////////
+﻿//This is the service worker with the Cache-first network
 
-const cacheTitle = "ARROWSRAIN";
-const cacheVersion = "1.5";
-const cacheName = cacheTitle+'-v'+cacheVersion;
-
-const defaultToCache = [
+var CACHE = 'arrows-rain-cache';
+var precacheFiles = [
     '/',
     'res/arrows/up.png',
     'res/arrows/down.png',
@@ -18,64 +15,57 @@ const defaultToCache = [
     'res/oglogo.png',
     'res/favicon.ico',
     'manifest.json',
-]
+];
 
-///////////////////////////////FUNZIONI///////////////////////////////
+//Install stage sets up the cache-array to configure pre-cache content
+self.addEventListener('install', function(evt) {
+  console.log('[PWA Builder] The service worker is being installed.');
+  evt.waitUntil(precache().then(function() {
+    console.log('[PWA Builder] Skip waiting on install');
+    return self.skipWaiting();
+  }));
+});
 
-const sendToCache = async toCache => {
-    caches.open(cacheName)
-    .then (
-        cache => cache.addAll(toCache)
-    )
+
+//allow sw to control of current page
+self.addEventListener('activate', function(event) {
+  console.log('[PWA Builder] Claiming clients for current page');
+  return self.clients.claim();
+});
+
+self.addEventListener('fetch', function(evt) {
+  console.log('[PWA Builder] The service worker is serving the asset.'+ evt.request.url);
+  evt.respondWith(fromCache(evt.request).catch(fromServer(evt.request)));
+  evt.waitUntil(update(evt.request));
+});
+
+
+function precache() {
+  return caches.open(CACHE).then(function (cache) {
+    return cache.addAll(precacheFiles);
+  });
 }
 
-const serverFetch = request => fetch(request).then( response => response );
+function fromCache(request) {
+  //we pull files from the cache first thing so we can show them fast
+  return caches.open(CACHE).then(function (cache) {
+    return cache.match(request).then(function (matching) {
+      return matching || Promise.reject('no-match');
+    });
+  });
+}
 
-const cacheFetch = request => 
-    caches.open(cacheName)
-    .then(
-        cache => 
-            cache.match(request)
-            .then(
-                response => response || serverFetch(request)
-            )
-            .catch(
-                error => serverFetch(request)
-            )
-    )
+function update(request) {
+  //this is where we call the server to get the newest version of the 
+  //file to use the next time we show view
+  return caches.open(CACHE).then(function (cache) {
+    return fetch(request).then(function (response) {
+      return cache.put(request, response);
+    });
+  });
+}
 
-
-///////////////////////////////EVENTI/////////////////////////////////
-
-
-self.addEventListener(
-    'install',
-    event => {
-        let cacheWhitelist = [];
-        event.waitUntil(
-            sendToCache(defaultToCache)
-        );
-    }
-);
-
-self.addEventListener(
-    'activate',
-    event => {}
-);
-
-self.addEventListener(
-    'message',
-    event => {
-        let message = event.data;
-        console.log('Ricevuto messaggio recitante: "'+message+'";');
-    }
-    
-);
-
-self.addEventListener(
-    'fetch',
-    event => event.respondWith( cacheFetch(event.request) )
-);
-
-
-///////////////////////////////FINE///////////////////////////////////
+function fromServer(request){
+  //this is the fallback if it is not in the cache to go to the server and get it
+  return fetch(request).then(function(response){ return response});
+}

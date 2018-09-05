@@ -1,4 +1,5 @@
 _firebaserc
 firebase.json
 .firebase
+.firebaserc
 .firebase/*

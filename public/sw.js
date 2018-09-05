@@ -17,6 +17,7 @@ var precacheFiles = [
 var offlineFiles = [
     '/',
     'index.html',
+    '404.html',
     'css/index.css',
     'js/index.js',
     'manifest.json',
